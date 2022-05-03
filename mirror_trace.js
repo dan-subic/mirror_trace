@@ -4,6 +4,9 @@
 // You can see a demo of this script in action at: https://dom.az1.qualtrics.com/jfe/form/SV_eeSj6E3YyI8nxdP
 // And you can see how pre-screening to ensure browser compatibility works here: https://dom.az1.qualtrics.com/jfe/form/SV_0lEq6SBvvT5LAj3
 
+//image dimensions
+var mywidth = 400;
+var myheight = 300;
 
 // this object contains the materials for the task - 
 //   the mirror property say if that trial should be mirrored
@@ -18,10 +21,14 @@
 var materials = {
 		'mirror' : [false, false, false, false, false, false, false, false],
 		'file_names' : ["https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/sample.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trialh1.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trialh2.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trialh3.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trial1.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trial2.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trial3.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/sample.png"],
-		'xstarts' : [47,	27,		40,		280,		27, 40, 280, 33],
+		/*'xstarts' : [47,	27,		40,		280,		27, 40, 280, 33],
 		'ystarts' : [256,	275,	45,		276,		275, 45, 276, 250],
 		'xends' :   [344,	370,	368,	33,			370, 368, 33, 47],
-		'yends' :    [260,	28,		267,	250,		28,267,250, 256]
+		'yends' :    [260,	28,		267,	250,		28,267,250, 256]*/
+		'xstarts': [mywidth - 344, mywidth - 370, mywidth - 368, mywidth - 33, mywidth -370, mywidth - 368, mywidth - 33, mywidth - 47],
+		'ystarts': [myheight - 260,	myheight - 28, myheight - 267, myheight - 250,	myheight - 28,myheight - 267, myheight - 250, myheight - 256],
+		'xends': [mywidth - 47,	mywidth - 27, mywidth - 40, mywidth - 280, mywidth - 27, mywidth - 40, mywidth - 280, mywidth - 33],
+		'yends': [myheight - 256, myheight - 275, myheight - 45, myheight - 276, myheight - 275, myheight - 45, myheight - 276, myheight - 250]
 	}
 	
 	//	'xstarts' : [47,	27,		40,		280,		40,		383,	352],
@@ -37,9 +44,7 @@ var materials = {
 	var saveTrace = false;
 	
 
-	//image dimensions
-	var mywidth = 400;
-	var myheight = 300;
+	
 
 	var score = 0;
 	var timeDiff = 0;
