@@ -99,9 +99,9 @@ function do_mirror() {
 	currentRefresh = 0;
 	
 	//drawing contexts for cursor area and mirrored area
-	canvas = document.querySelector('#paint');
+	canvas = document.querySelector('#paint-practice');
 	ctx = canvas.getContext('2d');
-	canvas_mirror = document.querySelector('#mirror');
+	canvas_mirror = document.querySelector('#mirror-practice');
 	ctx_mirror = canvas_mirror.getContext('2d');
 	
 	//load the image to trace
@@ -121,7 +121,7 @@ function do_mirror() {
 	   ctx.fill();
 	   ctx_mirror.globalAlpha=1;
 	   ctx.globalAlpha=1;
-	   document.getElementById("status").innerHTML = "Click the green circle to begin this trial"; 
+	   document.getElementById("status-practice").innerHTML = "Click the green circle to begin this trial"; 
     };
 	imageObj.crossOrigin="anonymous";
     imageObj.src=imagePath;
@@ -239,7 +239,7 @@ function do_mirror() {
 				ctx_mirror.lineTo(mouse.x, mouse.y);
 			}
 			ctx_mirror.stroke();		
-			document.getElementById("status").innerHTML = "Score = " + Math.round(score *100) +"% ";
+			document.getElementById("status-practice").innerHTML = "Score = " + Math.round(score *100) +"% ";
 			//document.getElementByID("status").innerHTML = p[0]+p[1]+p[2];
 
 		} else {
@@ -268,10 +268,10 @@ function do_mirror() {
 				ctx_mirror.fillStyle = 'green';
 				ctx_mirror.fill();
 				lastRefresh = currentRefresh
-				document.getElementById("status").innerHTML = "Click the green circle to begin this trial"; 
+				document.getElementById("status-practice").innerHTML = "Click the green circle to begin this trial"; 
 			}
 			} else {
-				document.getElementById("status").innerHTML = "Finished with score = " + Math.round(score *100) + "%<BR> Click next to continue."; 
+				document.getElementById("status-practice").innerHTML = "Finished with score = " + Math.round(score *100) + "%<BR> Click next to continue."; 
 			}
 		}
 		 
@@ -353,7 +353,7 @@ function findPos(obj) {
         do {
             curleft += obj.offsetLeft;
             curtop += obj.offsetTop;
-            document.getElementById("status").innerHTML += obj.id + " Left: " + obj.offsetLeft + "Top: " + obj.offsetTop + " / ";
+            document.getElementById("status-practice").innerHTML += obj.id + " Left: " + obj.offsetLeft + "Top: " + obj.offsetTop + " / ";
         } while (obj = obj.offsetParent);
         return { x: curleft, y: curtop };
     }
