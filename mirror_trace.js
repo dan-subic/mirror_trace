@@ -144,7 +144,7 @@ function do_mirror_practice() {
 		mouse.y = e.pageY - this.offsetTop;
 		
 		//update status
-		var pos = betterPos(canvas, e);
+		var pos = betterPosPractice(canvas, e);
 		//var pos = findPos(this);
                 //var x = e.pageX - pos.x;
                 //var y = e.pageY - pos.y;
@@ -174,7 +174,7 @@ function do_mirror_practice() {
 			drawing = false;
 			finished = true;
 			if (saveTrace) {
-				saveCanvas();
+				saveCanvasPractice();
 				//call save function
 			}
 		  }
@@ -337,7 +337,7 @@ function do_mirror_practice() {
 	};
 
 
-function betterPos(canvas, evt) {
+function betterPosPractice(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {
       x: evt.clientX - rect.left,
@@ -345,7 +345,7 @@ function betterPos(canvas, evt) {
     };
 }
 	
-function findPos(obj) {
+function findPosPractice(obj) {
     var curleft = 0, curtop = 0;
     //document.getElementById("status").innerHTML = "Find pos: ";
     
@@ -366,7 +366,7 @@ function rgbToHex(r, g, b) {
     return ((r << 16) | (g << 8) | b).toString(16);
 }
 
-function saveCanvas() {
+function saveCanvasPractice() {
 
 	// Get the canvas screenshot as PNG
 	var screenshot = Canvas2Image.saveAsPNG(canvas_mirror, true);
