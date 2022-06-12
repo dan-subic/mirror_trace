@@ -69,7 +69,7 @@ var materials = {
 	
 
 
-function do_mirror() {	
+function do_mirror_practice() {	
 	//load materials
 	var imagePath = materials.file_names[trialnumber];	
 	mirror = materials.mirror[trialnumber];
