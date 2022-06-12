@@ -18,7 +18,7 @@ var myheight = 300;
 // currently this displays 3 difficult trials (h1, h2, and h3) and 3 regular trials (4, 5, 6)
 // the images posted on github all have the same total line length and 15 segments 
 
-var materials = {
+var materialsPractice = {
 		'mirror' : [false, false, false, false, false, false, false, false],
 		'file_names' : ["https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/sample.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trialh1.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trialh2.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trialh3.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trial1.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trial2.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/trial3.png", "https://raw.githubusercontent.com/rcalinjageman/mirror_trace/master/sample.png"],
 		/*'xstarts' : [47,	27,		40,		280,		27, 40, 280, 33],
@@ -71,13 +71,13 @@ var materials = {
 
 function do_mirror_practice() {	
 	//load materials
-	var imagePath = materials.file_names[trialnumber];	
-	mirror = materials.mirror[trialnumber];
-	var xstart = materials.xstarts[trialnumber];
-	var ystart = materials.ystarts[trialnumber];;
+	var imagePath = materialsPractice.file_names[trialnumber];	
+	mirror = materialsPractice.mirror[trialnumber];
+	var xstart = materialsPractice.xstarts[trialnumber];
+	var ystart = materialsPractice.ystarts[trialnumber];;
 	var startRadius = 15;
-	var xend = materials.xends[trialnumber];
-	var yend = materials.yends[trialnumber];
+	var xend = materialsPractice.xends[trialnumber];
+	var yend = materialsPractice.yends[trialnumber];
 	var endRadius = 7;
 
 	
